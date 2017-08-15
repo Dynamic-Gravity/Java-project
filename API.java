@@ -1,7 +1,5 @@
-import java.io.*;
 import java.util.Scanner;
-import Weight.*;
-import Length.*;
+import convert.*;
 public class API {
     public static void main (String[] args){
         // aliasing nl to new line
@@ -19,8 +17,8 @@ public class API {
             
             Scanner scan = new Scanner(System.in);
             
-            weightObject = new  Weight();
-            lenghObject = new Length();
+            Weight weightObject = new  Weight();
+            Length lenghObject = new Length();
             
             
             String s = scan.next();

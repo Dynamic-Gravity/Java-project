@@ -1,3 +1,4 @@
+package convert;
 // Class:           Value
 // 
 // Type:            Abstract
@@ -9,12 +10,12 @@
 //                  setValue()      set current value.
 //                  setLocale()     set current locale.
 //                  convert()       convert imperial to metric & vice-versa. Implemented in children.
-abstract class Value {
+public abstract class Value {
     protected float v;
     protected String l;
     // default constructor
     Value (){
-        setValue(0);
+        setValue(0.0f);
         setLocale("");
     }
     public void setValue(float value){
@@ -29,7 +30,7 @@ abstract class Value {
         // put locale into protected instance variable
         l = locale;
     }
-    public String getValue(){
+    public float getValue(){
         return v;
     }
     public String getLocale(){

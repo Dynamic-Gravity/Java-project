@@ -1,4 +1,3 @@
-import Value.*;
 // Class:           Length
 // 
 // Type:            Public
@@ -6,7 +5,7 @@ import Value.*;
 // Description:     This class contains the logic for weights.
 // 
 // Methods:         convert()       converts meters to feet & vice-versa.
-public class Length implements Value {
+public class Length extends Value {
     public Length(String value, String locale){
         super();
         super.setValue(value);
@@ -22,13 +21,13 @@ public class Length implements Value {
         // convert metric to imperial
         if (option.toLowerCase() == "i"){
             // convert meters to feet
-            float newValue = currentValue * 3.2808;
+            float newValue = currentValue * 3.2808f;
             super.setValue(newValue);
         }
         // convert imperial to metric
         else if (option.toLowerCase() == "m"){
             // convert feet to meters
-            float newValue = currentValue / 3.2808;
+            float newValue = currentValue / 3.2808f;
             super.setValue(newValue);
         } else {
             System.out.println("Invalid option");

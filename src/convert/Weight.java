@@ -1,4 +1,3 @@
-import Value.*;
 // Class:           Weight
 // 
 // Type:            Public
@@ -6,7 +5,7 @@ import Value.*;
 // Description:     This class contains the logic for weights.
 // 
 // Methods:         convert()       converts grams to ounces & vice-versa.               
-public class Weight implements Value {
+public class Weight extends Value {
     public Weight(String value, String locale){
         super();
         super.setValue(value);
@@ -22,13 +21,13 @@ public class Weight implements Value {
         // convert metric to imperial
         if (option.toLowerCase() == "i"){
             // convert grams to ounces
-            float newValue = currentValue * 0.035274;
+            float newValue = currentValue * 0.035274f;
             super.setValue(newValue);
         }
         // convert imperial to metric
         else if (option.toLowerCase() == "m"){
             // convert ounces to grams
-            float newValue = currentValue / 0.035274;
+            float newValue = currentValue / 0.035274f;
             super.setValue(newValue);
         } else {
             System.out.println("Invalid option");
